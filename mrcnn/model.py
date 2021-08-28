@@ -1526,7 +1526,7 @@ def build_rpn_targets(image_shape, anchors, gt_class_ids, gt_boxes, config):
     for i, a in zip(ids, anchors[ids]):
         # Closest gt box (it might have IoU < 0.7)
         gt = gt_boxes[anchor_iou_argmax[i]]
-	rpn_bbox[ix] = utils.box_refinement(a,gt)
+	      rpn_bbox[ix] = utils.box_refinement(a,gt)
 #         # Convert coordinates to center plus width/height.
 #         # GT Box
 #         gt_h = gt[2] - gt[0]
